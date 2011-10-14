@@ -1,0 +1,13 @@
+
+Bunch of stuff that is useful to do. It is important enough that in the future
+stuff here should be done by default.
+
+* login to your user
+    # su - username
+
+* sudo and add your user to the sudo group
+    # apt-get install sudo
+    # usermod -G sudo -a username
+
+* fix permission of terminal (make programs as screen work correctly)
+    # chmod a+rw /dev/pts/0
