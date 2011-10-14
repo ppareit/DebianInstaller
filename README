@@ -1,0 +1,89 @@
+DESCRIPTION
+===========
+These set of scripts can be used to install debian on android.
+
+DEPENDENSIES
+============
+On host machine:
+debootstrap (install for instance with apt-get install debootstrap)
+
+On android device:
+Must be rooted
+Busybox must be installed
+
+INSTALLATION
+============
+First clone this repository to your host machine:
+
+    $ git clone ...
+
+Now enter the scripts directory:
+
+    $ cd DebianInstaller/scripts
+
+First create an image on the host machine:
+
+    $ sudo ./createimage.sh
+
+Now push the image to the android device (make sure adb is connected):
+
+    $ ./pushimage.sh
+
+Everything is now installed.
+
+# TODO: the next part could be automated with a script
+
+You can proceed on the android device by starting up
+a terminal emulator or by logging in to the shell from adb:
+
+    $ adb shell
+
+Now will we login for the first time. Do the following:
+
+    $ su -
+    # ch2debian
+    # debootstrap/debootstrap --second-stage  # TODO: check, not sure if this was the command used
+    # exit
+    # ch2debian
+    # adduser username
+    # addgroup --gid 3003 inet
+    # usermod -G inet -a username
+    # echo 'deb http://ftp.COUNTRY.debian.org/debian/ squeeze main contrib non-free' >> /etc/apt/sources.list
+    # apt-get update && apt-get upgrade
+    # su - username
+    $
+
+Now everytime you want to chroot to your debian, start a terminal and run
+
+    $ ch2debian  # TODO: check, can this be made to start as user (SUID?)
+
+HACKING
+=======
+These set of scripts work for me, but they might need some more work.
+Make your modifications and run
+
+     $ git diff
+
+to send me a patch. Even beter, fork this project on github and send
+me a pull request!
+
+TODO
+====
+* post installation script (second stage of bootstrap and add user)
+* make one controlling script
+* make scripts take options
+* put this all in an installable .apk package
+
+REFERENCE
+=========
+These set of scripts are based on the following articles:
+http://www.saurik.com/id/10
+http://www.offensivethinking.org/thoughts/2011/07/14/debian-chroot-eee-pad-transformer/
+
+LICENSE
+=======
+GNU GENERAL PUBLIC LICENSE Version 3
+http://www.gnu.org/copyleft/gpl.html
+
+
+    
