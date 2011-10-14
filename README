@@ -15,7 +15,7 @@ INSTALLATION
 ============
 First clone this repository to your host machine:
 
-    $ git clone ...
+    $ git clone git@github.com:ppareit/DebianInstaller.git
 
 Now enter the scripts directory:
 
