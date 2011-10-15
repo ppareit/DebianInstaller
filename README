@@ -57,6 +57,14 @@ Now everytime you want to chroot to your debian, start a terminal and run
 
     $ ch2debian  # TODO: check, can this be made to start as user (SUID?)
 
+DEVICE SPECIFIC
+===============
+For the transformer there is a script './pushkeylayout.sh' that can be used to correct
+the keylayout of the dock when the dock is not US. It will also set the BACK key to ESC.
+Usage:
+    $ cd scripts
+    $ ./pushkeylayout.sh TF101 BE
+
 HACKING
 =======
 These set of scripts work for me, but they might need some more work.
