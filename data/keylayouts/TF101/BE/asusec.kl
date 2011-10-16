@@ -52,7 +52,7 @@ key 52    PERIOD                  WAKE UNLOCK
 key 53    SLASH                   WAKE UNLOCK
 key 54    SHIFT_RIGHT             WAKE UNLOCK
 key 29    CTRL_LEFT               WAKE UNLOCK
-key 217   ALT_LEFT                WAKE UNLOCK
+key 217   META_LEFT               WAKE UNLOCK
 key 57    SPACE                   WAKE UNLOCK
 key 100   ALT_RIGHT               WAKE UNLOCK
 key 97    CTRL_RIGHT              WAKE UNLOCK
