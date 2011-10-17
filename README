@@ -5,11 +5,12 @@ These set of scripts can be used to install debian on android.
 DEPENDENSIES
 ============
 On host machine:
-debootstrap (install for instance with apt-get install debootstrap)
+* debootstrap (install for instance with apt-get install debootstrap)
+* adb must be installed and working
 
 On android device:
-Must be rooted
-Busybox must be installed
+* Must be rooted
+* Busybox must be installed
 
 INSTALLATION
 ============
